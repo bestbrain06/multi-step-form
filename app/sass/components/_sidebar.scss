@@ -1,0 +1,104 @@
+@use '../util' as u;
+
+.card {
+  background-color: var(--primary-200);
+  height: 90vh;
+  @include u.breakpoint(medium) {
+    height: fit-content;
+  }
+
+  @include u.breakpoint(medium) {
+    background-color: var(--white);
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 30px;
+    gap: 100px;
+  }
+}
+
+.sidebar {
+  position: relative;
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-block-start: 30px;
+
+    display: flex;
+    gap: 20px;
+    @include u.breakpoint(medium) {
+      margin-block-start: 0;
+      left: 0;
+      transform: translateX(0%);
+      gap: 50px;
+      margin-inline-start: 30px;
+      margin-block-start: 30px;
+    }
+
+    @include u.breakpoint(medium) {
+      flex-direction: column;
+    }
+    .step {
+      display: flex;
+      gap: 20px;
+
+      &__button {
+        button {
+          color: var(--white);
+          background-color: transparent;
+          width: 40px;
+          border: 1px solid var(--white);
+          border-radius: 50%;
+          height: 40px;
+
+          &.checked {
+            background-color: var(--primary-200);
+            color: var(--primary-800);
+            border: 0;
+          }
+        }
+      }
+
+      &__content {
+        display: none;
+        @include u.breakpoint(medium) {
+          display: block;
+        }
+
+        p {
+          text-transform: uppercase;
+          color: var(--neutral-700);
+        }
+
+        h3 {
+          color: var(--white);
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+
+  position: relative;
+  bottom: -160px;
+
+  @include u.breakpoint(medium) {
+    margin-block-start: 60px;
+    position: static;
+  }
+
+  button {
+    padding: 0.5rem 0.9rem;
+    border: 0;
+    border-radius: 5px;
+
+    background-color: var(--primary-800);
+    color: var(--white);
+  }
+}

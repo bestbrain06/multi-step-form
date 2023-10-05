@@ -1,0 +1,81 @@
+@use '../util' as u;
+
+.steps {
+  background-color: var(--white);
+  width: 300px;
+
+  border-radius: 10px;
+  position: relative;
+  top: -73px;
+  left: 50%;
+  transform: translateX(-50%);
+  @include u.breakpoint(medium) {
+    position: static;
+    transform: translateX(0%);
+    width: none;
+  }
+  .step1 {
+    padding: 20px;
+    @include u.breakpoint(medium) {
+      padding: 0;
+    }
+
+    h1 {
+      color: var(--primary-800);
+      margin-block-end: 20px;
+      @include u.breakpoint(medium) {
+        margin-block-start: 50px;
+      }
+    }
+
+    p {
+      color: var(--neutral-700);
+      margin-block-end: 20px;
+
+      @include u.breakpoint(medium) {
+        margin-block-end: 50px;
+      }
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+
+      gap: 20px;
+      .label {
+        display: flex;
+        justify-content: space-between;
+        p {
+          font-size: 13px;
+          color: var(--primary-800);
+          margin-block-end: 5px;
+        }
+
+        small {
+          &.error {
+            color: var(--red);
+          }
+        }
+      }
+
+      input {
+        width: 100%;
+        padding-block: 10px;
+        padding-inline-start: 10px;
+        outline: 0;
+        border: 1px solid var(--neutral-500);
+        color: var(--neutral-700);
+        font-weight: var(--fw-bold);
+        border-radius: 7px;
+
+        &:focus {
+          border-color: var(--primary-600);
+        }
+
+        &.error {
+          border-color: var(--red);
+        }
+      }
+    }
+  }
+}

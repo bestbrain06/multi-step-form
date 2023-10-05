@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  src: url(../assets/fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  src: url(../assets/fonts/Ubuntu-Medium.ttf);
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 700;
+  src: url(../assets/fonts/Ubuntu-Bold.ttf);
+}
+
+:root {
+  --ff: 'Ubuntu';
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --fs-regular: 1rem; // 16px
+  --fs-meidum: 1.125rem; //18px
+  --fs-large: 1.375rem; //22px
+  --fs-Xlarge: 1.75rem; //28px
+}

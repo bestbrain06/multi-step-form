@@ -1,0 +1,29 @@
+@use '../util' as u;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+picture,
+img,
+svg {
+  display: block;
+}
+
+body {
+  font-family: var(--ff);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-regular);
+  min-height: 100vh;
+
+  @include u.breakpoint(medium) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-200);
+  }
+}

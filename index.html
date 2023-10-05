@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Multi-step form</title>
+
+    <link rel="stylesheet" href="dist/style.css" />
+
+    <script src="app/js/app.js" defer></script>
+  </head>
+  <body>
+    <!-- Sidebar start -->
+    <main>
+      <div class="card">
+        <div class="sidebar">
+          <picture class="sidebar__image">
+            <source
+              media="(min-width: 750px)"
+              srcset="assets/images/bg-sidebar-desktop.svg"
+            />
+            <img src="assets/images/bg-sidebar-mobile.svg" alt="" />
+          </picture>
+
+          <div class="sidebar__content">
+            <div class="step">
+              <div class="step__button">
+                <button class="checked">1</button>
+              </div>
+              <div class="step__content">
+                <p>Step 1</p>
+                <h3>Your info</h3>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step__button">
+                <button>2</button>
+              </div>
+              <div class="step__content">
+                <p>Step 2</p>
+                <h3>Select plan</h3>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step__button">
+                <button>3</button>
+              </div>
+              <div class="step__content">
+                <p>Step 3</p>
+                <h3>Add-ons</h3>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step__button">
+                <button>4</button>
+              </div>
+              <div class="step__content">
+                <p>Step 4</p>
+                <h3>Summary</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Sidebar end -->
+
+        <!-- Step 1 start -->
+
+        <div class="steps">
+          <div class="step1">
+            <h1>Personal info</h1>
+            <p>Please provide your name, email address, and phone number.</p>
+
+            <form class="step1__form">
+              <div class="form-control">
+                <div class="label">
+                  <p>Name</p>
+                  <small></small>
+                </div>
+                <input
+                  type="text"
+                  id="username"
+                  placeholder="e.g. Stephen King"
+                />
+              </div>
+
+              <div class="form-control">
+                <div class="label">
+                  <p>Email Address</p>
+                  <small></small>
+                </div>
+                <input
+                  type="text"
+                  id="email"
+                  placeholder="e.g. stephenking@lorem.com "
+                />
+              </div>
+
+              <div class="form-control">
+                <div class="label">
+                  <p>Phone Number</p>
+                  <small></small>
+                </div>
+                <input
+                  type="text"
+                  name="number"
+                  placeholder=" e.g. +1 234 567 890 "
+                />
+              </div>
+              <div class="btn">
+                <button>Next Step</button>
+              </div>
+            </form>
+            <!-- Step 1 end -->
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
