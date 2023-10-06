@@ -1,12 +1,14 @@
 const form = document.querySelector('form')
 const userName = document.querySelector('#username')
 const userEmail = document.querySelector('#email')
+const telephoneNumber = document.querySelector('#number')
 
 form.addEventListener('submit', (e) => {
   e.preventDefault()
 
   name()
   validEmail()
+  validNumber()
 })
 
 function showError(input, message) {
@@ -33,21 +35,27 @@ function name() {
   }
 }
 
-function isValidEmail(input, email) {
+function isValidEmail(email) {
   const regex =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
-  let correctEmail = regex.test(input.value)
+  return regex.test(email)
 }
 
 function validEmail() {
   if (userEmail.value === '') {
     showError(userEmail, 'This field is required')
+  } else if (!isValidEmail(email.value)) {
+    showError(email, 'Invalid Email')
   } else {
     showSucess(userEmail)
   }
+}
 
-  if (!correctEmail) {
-    showError(userEmail, 'Invalid Email')
+function validNumber() {
+  if (telephoneNumber.value === '') {
+    showError(telephoneNumber, 'This field is required')
+  } else {
+    showSucess(telephoneNumber)
   }
 }

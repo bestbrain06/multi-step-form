@@ -15,6 +15,7 @@
     width: none;
   }
   .step1 {
+    display: none;
     padding: 20px;
     @include u.breakpoint(medium) {
       padding: 0;
