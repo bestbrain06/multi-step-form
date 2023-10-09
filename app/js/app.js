@@ -1,11 +1,9 @@
-const form = document.querySelector('form')
+const button = document.querySelector('#button')
 const userName = document.querySelector('#username')
 const userEmail = document.querySelector('#email')
 const telephoneNumber = document.querySelector('#number')
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault()
-
+button.addEventListener('click', () => {
   name()
   validEmail()
   validNumber()
@@ -59,3 +57,17 @@ function validNumber() {
     showSucess(telephoneNumber)
   }
 }
+
+const monthly = document.querySelector('#monthly')
+const yearly = document.querySelector('#yearly')
+const checkbox = document.querySelector('#checkbox')
+
+checkbox.addEventListener('click', () => {
+  if (checkbox.checked) {
+    monthly.classList.add('hide')
+    yearly.classList.remove('hide')
+  } else {
+    monthly.classList.remove('hide')
+    yearly.classList.add('hide')
+  }
+})

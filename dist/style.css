@@ -88,6 +88,10 @@ body {
   }
 }
 
+.hide {
+  display: none;
+}
+
 .card {
   background-color: var(--primary-200);
   height: 90vh;
@@ -96,6 +100,7 @@ body {
   .card {
     height: -moz-fit-content;
     height: fit-content;
+    width: 100%;
   }
 }
 @media (min-width: 46.875em) {
@@ -170,16 +175,9 @@ body {
   text-transform: uppercase;
 }
 
-.btn {
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  bottom: -160px;
-}
 @media (min-width: 46.875em) {
   .btn {
-    margin-block-start: 60px;
-    position: static;
+    margin-block-start: 500px;
   }
 }
 .btn button {
@@ -208,7 +206,6 @@ body {
   }
 }
 .steps .step1 {
-  display: none;
   padding: 20px;
 }
 @media (min-width: 46.875em) {
@@ -282,9 +279,13 @@ body {
   flex-direction: column;
   gap: 20px;
 }
+.step2 .subscriptions.hide {
+  display: none;
+}
 @media (min-width: 46.875em) {
   .step2 .subscriptions {
     flex-direction: row;
+    width: 500px;
   }
 }
 .step2 .subscriptions .subscription {
@@ -294,6 +295,13 @@ body {
   gap: 10px;
   padding: 10px;
   margin-block-start: 20px;
+}
+@media (min-width: 46.875em) {
+  .step2 .subscriptions .subscription {
+    flex-direction: column;
+    gap: 50px;
+    width: 150px;
+  }
 }
 .step2 .subscriptions .subscription h2 {
   color: var(--primary-800);
@@ -306,4 +314,37 @@ body {
   display: flex;
   flex-direction: column;
   gap: 7px;
+}
+.step2 .toggles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 2rem;
+}
+.step2 .toggles .switch {
+  position: relative;
+}
+.step2 .toggles .switch label {
+  width: 50px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: var(--primary-800);
+  display: block;
+  cursor: pointer;
+}
+.step2 .toggles .switch input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: white;
+}
+.step2 .toggles .switch input:checked {
+  left: 28px;
 }/*# sourceMappingURL=style.css.map */

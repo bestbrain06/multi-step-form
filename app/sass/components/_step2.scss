@@ -13,9 +13,13 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    &.hide {
+      display: none;
+    }
 
     @include u.breakpoint(medium) {
       flex-direction: row;
+      width: 500px;
     }
 
     .subscription {
@@ -26,6 +30,12 @@
       gap: 10px;
       padding: 10px;
       margin-block-start: 20px;
+
+      @include u.breakpoint(medium) {
+        flex-direction: column;
+        gap: 50px;
+        width: 150px;
+      }
 
       h2 {
         color: var(--primary-800);
@@ -40,6 +50,41 @@
         display: flex;
         flex-direction: column;
         gap: 7px;
+      }
+    }
+  }
+  .toggles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block-start: 2rem;
+    .switch {
+      position: relative;
+
+      label {
+        width: 50px;
+        height: 20px;
+        border-radius: 10px;
+        background-color: var(--primary-800);
+        display: block;
+        cursor: pointer;
+      }
+
+      input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+
+        appearance: none;
+        width: 20px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: white;
+
+        &:checked {
+          left: 28px;
+        }
       }
     }
   }
